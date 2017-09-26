@@ -19,6 +19,8 @@
 	</parent>
 
 	<properties>
+        <jbehave.version>4.1.1</jbehave.version>
+
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
@@ -26,5 +28,16 @@
 
     <modules>
         <module>reporter-client</module>
+        <module>reporter-server</module>
     </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.jbehave</groupId>
+                <artifactId>jbehave-core</artifactId>
+                <version>${jbehave.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
